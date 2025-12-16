@@ -1,0 +1,18 @@
+<object>
+<object name="name">
+<string name="first">Tatu</string>
+<string name="last">Saloranta</string>
+</object>
+<string name="title">Jackson founder</string>
+<string name="company">FasterXML</string>
+<array name="pets">
+<object>
+<string name="type">dog</string>
+<number name="number">1</number>
+</object>
+<object>
+<string name="type">fish</string>
+<number name="number">50</number>
+</object>
+</array>
+</object>
