@@ -40,7 +40,7 @@ After running, `output.xml` will contain the XML version of your JSON.
 }
 
 ## 📝 Sample Output (`output.xml`)
-<object>
+"<object>
   <string name="name">Udhayan</string>
   <number name="age">21</number>
   <boolean name="active">true</boolean>
@@ -49,7 +49,7 @@ After running, `output.xml` will contain the XML version of your JSON.
     <string>Spring</string>
   </array>
   <null name="address"/>
-</object>
+</object>"
 
 ## 📦 Libraries Used
 - Jackson Databind (v2.15.2)
