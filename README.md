@@ -1,58 +1,36 @@
-jsonToXml
+# jsonToXml
 
 A simple Java program to convert JSON files to XML files using recursion.
 
-This project demonstrates:
+## 🚀 Features
+- Converts JSON objects, arrays, strings, numbers, booleans, and null values to XML.
+- Top-level JSON can only be an array or object.
+- Recursively handles nested objects and arrays.
+- Generates valid XML output.
 
-Parsing JSON using Jackson
+## 🛠 Prerequisites
+- Java JDK 17+
+- Maven
+- Basic knowledge of terminal/command-line
 
-Recursively converting JSON objects, arrays, and values into XML
-
-Packaging as an executable JAR
-
-Running via command-line arguments
-
-⚙️ Features
-
-Converts JSON objects, arrays, strings, numbers, booleans, null to XML
-
-Top-level JSON can only be array or object (as per assignment)
-
-Recursively handles nested objects and arrays
-
-Generates valid XML output
-
-🛠 Prerequisites
-
-Java JDK 17+ installed
-
-Maven installed
-
-Command-line / terminal knowledge
-
-💻 How to Build
-
-Open terminal in project root (jsonToXml)
-
-Run:
+## 💻 How to Build
+Open terminal in project root (`jsonToXml`) and run:
 
 mvn clean package
 
+This will generate the executable JAR at:
 
-This will generate the executable JAR in target/jsonToXml-0.0.1-SNAPSHOT.jar
+target/jsonToXml-0.0.1-SNAPSHOT.jar
 
-▶️ How to Run
+## ▶️ How to Run
 java -jar target/jsonToXml-0.0.1-SNAPSHOT.jar <input.json> <output.xml>
 
-
-Example:
-
+### Example
 java -jar target/jsonToXml-0.0.1-SNAPSHOT.jar input.json output.xml
 
+After running, `output.xml` will contain the XML version of your JSON.
 
-After running, output.xml will contain the XML version of your JSON.
-
-📝 Sample Input (input.json)
+## 📝 Sample Input (`input.json`)
 {
   "name": "Udhayan",
   "age": 21,
@@ -61,7 +39,7 @@ After running, output.xml will contain the XML version of your JSON.
   "address": null
 }
 
-📝 Sample Output (output.xml)
+## 📝 Sample Output (`output.xml`)
 <object>
   <string name="name">Udhayan</string>
   <number name="age">21</number>
@@ -73,31 +51,20 @@ After running, output.xml will contain the XML version of your JSON.
   <null name="address"/>
 </object>
 
-📦 Libraries Used
+## 📦 Libraries Used
+- Jackson Databind (v2.15.2)
 
-Jackson Databind
- (v2.15.2)
+## 🔧 Design Overview
+- MainApp → CLI entry point  
+- ConverterFactory → Returns XMLJSONConverterImpl instance (Factory Pattern)  
+- XMLJSONConverterI → Interface defining the conversion method  
+- XMLJSONConverterImpl → Reads JSON file and writes XML file  
+- JsonToXmlBuilder → Recursively traverses JSON nodes and builds XML string  
 
-🔧 Design Overview
+## ✅ Notes
+- Only supports valid JSON input.
+- Top-level JSON must be an object or array.
+- Output XML format follows the assignment specification.
 
-MainApp → CLI entry point
-
-ConverterFactory → Returns XMLJSONConverterImpl instance (Factory Pattern)
-
-XMLJSONConverterI → Interface defining the conversion method
-
-XMLJSONConverterImpl → Reads JSON file and writes XML file
-
-JsonToXmlBuilder → Recursively traverses JSON nodes and builds XML string
-
-✅ Notes
-
-Only supports valid JSON input
-
-Top-level JSON must be object or array
-
-Output XML format follows the assignment specification
-
-📌 Author
-
+## 📌 Author
 Udhayan – Software Engineer / Student
