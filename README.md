@@ -16,21 +16,30 @@ A simple Java program to convert JSON files to XML files using recursion.
 ## 💻 How to Build
 Open terminal in project root (`jsonToXml`) and run:
 
+```bash
 mvn clean package
+```
 
 This will generate the executable JAR at:
 
+```
 target/jsonToXml-0.0.1-SNAPSHOT.jar
+```
 
 ## ▶️ How to Run
+```bash
 java -jar target/jsonToXml-0.0.1-SNAPSHOT.jar <input.json> <output.xml>
+```
 
 ### Example
+```bash
 java -jar target/jsonToXml-0.0.1-SNAPSHOT.jar input.json output.xml
+```
 
 After running, `output.xml` will contain the XML version of your JSON.
 
 ## 📝 Sample Input (`input.json`)
+```json
 {
   "name": "Udhayan",
   "age": 21,
@@ -38,9 +47,11 @@ After running, `output.xml` will contain the XML version of your JSON.
   "skills": ["Java", "Spring"],
   "address": null
 }
+```
 
 ## 📝 Sample Output (`output.xml`)
-"<object>
+```xml
+<object>
   <string name="name">Udhayan</string>
   <number name="age">21</number>
   <boolean name="active">true</boolean>
@@ -49,7 +60,8 @@ After running, `output.xml` will contain the XML version of your JSON.
     <string>Spring</string>
   </array>
   <null name="address"/>
-</object>"
+</object>
+```
 
 ## 📦 Libraries Used
 - Jackson Databind (v2.15.2)
